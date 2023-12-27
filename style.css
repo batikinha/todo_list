@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #todo-container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  #todo-header {
+    background-color: #ffb6c1; /* Rosa pastel */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #todo-list {
+    padding: 20px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-item:last-child {
+    border-bottom: none;
+  }
+  
+  .todo-item:hover {
+    background-color: #f0e0e6; /* Rosa pastel mais claro */
+  }
+  
+  .todo-item input {
+    margin-right: 10px;
+  }
+  
+  #todo-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffb6c1; /* Rosa pastel */
+  }
+  
+  #add-button {
+    padding: 10px;
+    background-color: #ff69b4; /* Rosa choque pastel */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #add-button:hover {
+    background-color: #ff1493; /* Rosa choque mais escuro */
+  }
+  
