@@ -25,5 +25,39 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.parentElement.remove();
       }
     });
+    document.addEventListener('DOMContentLoaded', function () {
+        const kawaiiBackground = document.getElementById('kawaii-background');
+      
+        // Função para criar nuvens e estrelas
+        function createKawaiiElements() {
+          for (let i = 0; i < 5; i++) {
+            createCloud();
+            createStar();
+          }
+        }
+      
+        // Função para criar uma nuvem
+        function createCloud() {
+          const cloud = document.createElement('img');
+          cloud.src = 'cloud.png'; // Substitua com o caminho para sua imagem de nuvem
+          cloud.classList.add('cloud');
+          cloud.style.top = `${Math.random() * 50}%`;
+          cloud.style.animationDuration = `${Math.random() * 5 + 5}s`; // Duração da animação variável
+          kawaiiBackground.appendChild(cloud);
+        }
+      
+        // Função para criar uma estrela
+        function createStar() {
+          const star = document.createElement('div');
+          star.classList.add('star');
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.left = `${Math.random() * 100}%`;
+          star.style.animationDuration = `${Math.random() * 2 + 1}s`; // Duração da animação variável
+          kawaiiBackground.appendChild(star);
+        }
+      
+        // Criar elementos kawaii ao carregar a página
+        createKawaiiElements();
+    });      
   });
   
