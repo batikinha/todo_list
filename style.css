@@ -1,11 +1,13 @@
 body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
+  font-family: 'Arial', sans-serif;
+  background: #fcefee; /* Cor de fundo rosa claro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
   
   #todo-container {
     max-width: 400px;

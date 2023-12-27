@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.parentElement.remove();
       }
     });
+
     document.addEventListener('DOMContentLoaded', function () {
         const kawaiiBackground = document.getElementById('kawaii-background');
       
@@ -36,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       
-        
+        // Função para criar uma nuvem
         function createCloud() {
           const cloud = document.createElement('img');
-          cloud.src = 'img/nuvem.png';
+          cloud.src = 'img/nuvem.png'; 
           cloud.classList.add('cloud');
           cloud.style.top = `${Math.random() * 50}%`;
-          cloud.style.animationDuration = `${Math.random() * 5 + 5}s`; // Duração da animação variável
+          cloud.style.animationDuration = `${Math.random() * 5 + 5}s`; 
           kawaiiBackground.appendChild(cloud);
         }
       
@@ -58,6 +59,5 @@ document.addEventListener('DOMContentLoaded', function () {
       
         
         createKawaiiElements();
-    });      
-  });
-  
+      });
+});
