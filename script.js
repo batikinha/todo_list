@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const kawaiiBackground = document.getElementById('kawaii-background');
+  
+   
+    function createKawaiiElements() {
+      for (let i = 0; i < 5; i++) {
+        createCloud();
+        createStar();
+      }
+    }
+  
+    function createCloud() {
+      const cloud = document.createElement('img');
+      cloud.src = "img/nuvem.png";
+      cloud.classList.add('cloud');
+      cloud.style.top = `${Math.random() * 50}%`;
+      cloud.style.animationDuration = `${Math.random() * 5 + 5}s`; // Duração da animação variável
+      kawaiiBackground.appendChild(cloud);
+    }
+  
+ 
+    function createStar() {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${Math.random() * 2 + 1}s`; // Duração da animação variável
+      kawaiiBackground.appendChild(star);
+    }
+  
+    createKawaiiElements();
+  
     const addButton = document.getElementById('add-button');
     const newTaskInput = document.getElementById('new-task');
     const todoList = document.getElementById('todo-list');
@@ -25,39 +56,5 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.parentElement.remove();
       }
     });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const kawaiiBackground = document.getElementById('kawaii-background');
-      
-        
-        function createKawaiiElements() {
-          for (let i = 0; i < 5; i++) {
-            createCloud();
-            createStar();
-          }
-        }
-      
-        // Função para criar uma nuvem
-        function createCloud() {
-          const cloud = document.createElement('img');
-          cloud.src = 'img/nuvem.png'; 
-          cloud.classList.add('cloud');
-          cloud.style.top = `${Math.random() * 50}%`;
-          cloud.style.animationDuration = `${Math.random() * 5 + 5}s`; 
-          kawaiiBackground.appendChild(cloud);
-        }
-      
-       
-        function createStar() {
-          const star = document.createElement('div');
-          star.classList.add('star');
-          star.style.top = `${Math.random() * 100}%`;
-          star.style.left = `${Math.random() * 100}%`;
-          star.style.animationDuration = `${Math.random() * 2 + 1}s`; 
-          kawaiiBackground.appendChild(star);
-        }
-      
-        
-        createKawaiiElements();
-      });
-});
+  });
+  
